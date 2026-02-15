@@ -1,0 +1,49 @@
+# Default configuration for Black Box Trading
+
+# Market data settings
+data:
+  provider: yfinance  # Options: yfinance, alpha_vantage, polygon
+  symbols:
+    - AAPL
+    - TSLA
+    - NVDA
+    - GOOGL
+    - MSFT
+  interval: 1d  # Options: 1m, 5m, 15m, 1h, 1d, 1wk
+  period: 1y  # How much historical data to fetch
+
+# Pattern detection settings
+patterns:
+  enable:
+    - head_and_shoulders
+    - inverse_head_and_shoulders
+    - double_top
+    - double_bottom
+    - bull_flag
+    - bear_flag
+    - ascending_triangle
+    - descending_triangle
+    - symmetrical_triangle
+    - rising_wedge
+    - falling_wedge
+
+  sensitivity: 0.02  # Tolerance for pattern matching (2%)
+
+# Signal generation settings
+signals:
+  min_confidence: 0.7  # Minimum confidence threshold
+  stop_loss_pct: 0.05  # 5% stop loss
+  take_profit_pct: 0.10  # 10% take profit
+
+# Backtesting settings
+backtest:
+  initial_capital: 10000
+  commission: 0.001  # 0.1% per trade
+  slippage: 0.0001  # 0.01% slippage
+
+# Output settings
+output:
+  save_signals: true
+  save_backtest_results: true
+  charts: true
+  verbose: true
