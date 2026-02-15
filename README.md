@@ -2,6 +2,8 @@
 
 A modular automated trading framework with pattern detection, signal generation, and backtesting capabilities.
 
+**Note:** This repo contains only the trading code. My OpenClaw workspace configuration (SOUL.md, IDENTITY.md, etc.) lives in: https://github.com/p1gg13f4rm3r/myclaw
+
 ## Project Structure
 
 ```
